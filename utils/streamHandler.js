@@ -1,5 +1,13 @@
 var Tweet = require('../models/Tweet');
 
+/**
+ * This file is the stream connection between user and models.
+ * When a new tweet is created, the stream save it in the database and then send an advice to
+ * the UI
+ * @param stream
+ * @param io
+ */
+
 module.exports = function(stream, io){
 
     //When tweets are sent our way
@@ -23,7 +31,7 @@ module.exports = function(stream, io){
         //save to db
         tweetEntry.save(function(err){
             if(!err){
-                io.emit('tweet', tweet);
+                io.emit('tweet', tweet); //this emit an event
             }
         })
 
