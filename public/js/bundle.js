@@ -1,0 +1,1 @@
+console.error("\nC:\\Users\\dluque\\Documents\\React\\components\\TweetsApp.react.js:6\n            <div className=\"tweets-app\">\r\n            ^\nParseError: Unexpected token")
